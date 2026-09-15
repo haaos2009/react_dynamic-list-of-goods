@@ -14,6 +14,7 @@ export const App: React.FC = () => {
     getGoods()
       .then(setGoods)
       .catch(() => {
+        setGoods([]);
         setErrorMessage('Unable to load goods');
       });
   };
